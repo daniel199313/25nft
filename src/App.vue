@@ -133,56 +133,55 @@
 import Header from './components/Header.vue';
 import {ref,onMounted} from 'vue'
 import Alert from './components/Alert.vue';
+import post1 from '/src/assets/post1.png'
+import post2 from '/src/assets/post2.jpeg'
+import post3 from '/src/assets/post3.png'
+import post4 from '/src/assets/post4.jpeg'
+import post5 from '/src/assets/post5.jpeg'
+import post6 from '/src/assets/post6.png'
+import post7 from '/src/assets/post7.jpeg'
 
 const left = ref(0)
 const list = ref([
-  '/post1.png',
-  '/post2.jpeg',
-  '/post3.png',
-  '/post4.jpeg',
-  '/post5.jpeg',
-  '/post6.png',
-  '/post7.jpeg',
+  post1,
+  post2,
+  post3,
+  post4,
+  post5,
+  post6,
+  post7,
 
-  '/post1.png',
-  '/post2.jpeg',
-  '/post3.png',
-  '/post4.jpeg',
-  '/post5.jpeg',
-  '/post6.png',
-  '/post7.jpeg',
+  post1,
+  post2,
+  post3,
+  post4,
+  post5,
+  post6,
+  post7,
   
-  '/post1.png',
-  '/post2.jpeg',
-  '/post3.png',
-  '/post4.jpeg',
-  '/post5.jpeg',
-  '/post6.png',
-  '/post7.jpeg',
-
-  '/post1.png',
-  '/post2.jpeg',
-  '/post3.png',
-  '/post4.jpeg',
-  '/post5.jpeg',
-  '/post6.png',
-  '/post7.jpeg',
+  post1,
+  post2,
+  post3,
+  post4,
+  post5,
+  post6,
+  post7,
   
-  '/post1.png',
-  '/post2.jpeg',
-  '/post3.png',
-  '/post4.jpeg',
-  '/post5.jpeg',
-  '/post6.png',
-  '/post7.jpeg',
+  post1,
+  post2,
+  post3,
+  post4,
+  post5,
+  post6,
+  post7,
   
-  '/post1.png',
-  '/post2.jpeg',
-  '/post3.png',
-  '/post4.jpeg',
-  '/post5.jpeg',
-  '/post6.png',
-  '/post7.jpeg',  
+  post1,
+  post2,
+  post3,
+  post4,
+  post5,
+  post6,
+  post7,  
 ])
 let count = 0
 onMounted(()=> {
