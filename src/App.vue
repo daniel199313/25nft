@@ -240,6 +240,7 @@ body {
   margin-top:60px;
   img {
     width: 512px;
+    height: 512px;
     margin:0.5em;
     border-radius: 25px;
   }
@@ -424,6 +425,7 @@ body {
     margin-top: 1em;
     img {
       width: 85vw;
+      height: 85vw;
     }
   }
   .section-2 {

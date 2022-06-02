@@ -103,11 +103,12 @@ onUnmounted(()=> clearInterval(timer))
   }
   .timer {
     width: 300px;
-    background: linear-gradient(90deg, #a8ff4d 0%, #01fffe 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
+    // background: linear-gradient(90deg, #a8ff4d 0%, #01fffe 100%);
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+    // background-clip: text;
+    // text-fill-color: transparent;
+    color: #a8ff4d;
     display: flex;
     font-size: 36px;
     font-weight: 600;
