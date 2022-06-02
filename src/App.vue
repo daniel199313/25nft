@@ -40,7 +40,7 @@
     </div>
     <button disabled="true">
       <div class="mash"></div>
-      馬上登記，免費空投
+      6 月 15 日 00:00 準時開搶！
     </button>
   </div>
 </div>
@@ -65,44 +65,165 @@
       <img src="/src/assets/icon/icon-1.svg" alt="">
       <span>
         下載紫荊雜誌 APP
+
+        <div class="message" @click="openDownloadApp">
+          官方下載《紫荊》手機 APP
+        </div>
       </span>
     </div>
     <div class="item">
       <img src="/src/assets/icon/icon-2.svg" alt="">
       <span>
         下載小狐狸錢包
+
+        <a class="message" href="https://metamask.io/download/" target="_blank">
+          官方下載 小狐狸錢包 手機 APP。
+        </a>
       </span>
     </div>
     <div class="item">
       <img src="/src/assets/icon/icon-3.svg" alt="">
       <span>
         免費得到 ETH 錢包地址
+
+        <a target="_blank" href="https://1box.gitbook.io/1box-support/guide/how-to-use-metamask-on-mobile#step-2-set-up-network" class="message">
+        1Box Exchange 手把手教你創建和設置 小狐狸 ETH 錢包。
+        </a>
       </span>
     </div>
     <div class="item">
       <img src="/src/assets/icon/icon-4.svg" alt="">
       <span>
         查詢空投結果
+
+        <div class="message">
+          7 月 1 日 香港時間 10 AM 後, 在《紫荊》手機 APP 查看
+        </div>
       </span>
     </div>
     <div class="item">
       <img src="/src/assets/icon/icon-5.svg" alt="">
       <span>
         領取 NFT
+
+        <div class="message">
+        最快完成登記的 2500 位幸運兒，紫荊 將在 7 月 10 日前, 直接發送到你的 ETH 錢包。        
+        </div>
       </span>
     </div>
     <div class="item">
       <img src="/src/assets/icon/icon-6.svg" alt="">
       <span>
         查看你的 NFT
+
+        <div class="message">
+          收到後, 屬於你的, 世界獨一的 NFT 會馬上在小狐狸錢包看到。 
+        </div>
       </span>
     </div>                      
 
   </div>
 </div>
 
+<Alert :show="showAlert" title="Ooops. 手機 APP， 一定要用手機下載哦！" text="2500 NFTs 免費送出, 先到先得！" @ok="()=>closeAlert()"></Alert>
 
 </template>
+
+<script lang="ts" setup>
+import Header from './components/Header.vue';
+import {ref,onMounted} from 'vue'
+import Alert from './components/Alert.vue';
+
+const left = ref(0)
+const list = ref([
+  '/src/assets/post1.png',
+  '/src/assets/post2.jpeg',
+  '/src/assets/post3.png',
+  '/src/assets/post4.jpeg',
+  '/src/assets/post5.jpeg',
+  '/src/assets/post6.png',
+  '/src/assets/post7.jpeg',
+
+  '/src/assets/post1.png',
+  '/src/assets/post2.jpeg',
+  '/src/assets/post3.png',
+  '/src/assets/post4.jpeg',
+  '/src/assets/post5.jpeg',
+  '/src/assets/post6.png',
+  '/src/assets/post7.jpeg',
+  
+  '/src/assets/post1.png',
+  '/src/assets/post2.jpeg',
+  '/src/assets/post3.png',
+  '/src/assets/post4.jpeg',
+  '/src/assets/post5.jpeg',
+  '/src/assets/post6.png',
+  '/src/assets/post7.jpeg',
+
+  '/src/assets/post1.png',
+  '/src/assets/post2.jpeg',
+  '/src/assets/post3.png',
+  '/src/assets/post4.jpeg',
+  '/src/assets/post5.jpeg',
+  '/src/assets/post6.png',
+  '/src/assets/post7.jpeg',
+  
+  '/src/assets/post1.png',
+  '/src/assets/post2.jpeg',
+  '/src/assets/post3.png',
+  '/src/assets/post4.jpeg',
+  '/src/assets/post5.jpeg',
+  '/src/assets/post6.png',
+  '/src/assets/post7.jpeg',
+  
+  '/src/assets/post1.png',
+  '/src/assets/post2.jpeg',
+  '/src/assets/post3.png',
+  '/src/assets/post4.jpeg',
+  '/src/assets/post5.jpeg',
+  '/src/assets/post6.png',
+  '/src/assets/post7.jpeg',  
+])
+let count = 0
+onMounted(()=> {
+  setInterval(()=> {
+    count += 1
+    left.value -= 0.5
+    if (count == 3000) {
+      left.value = 0
+    }
+  },10)  
+})
+
+const showAlert = ref(false)
+const closeAlert = ()=> {
+  showAlert.value = false
+}
+
+const openDownloadApp = ()=> {
+  if (isPcOrMb()) {
+    showAlert.value = true
+  } else {
+    window.open('https://bau.com.hk/nmapp','_blank')
+  }
+}
+
+function isPcOrMb() {
+   var userAgentInfo = navigator.userAgent;
+   var Agents = ["Android", "iPhone",
+      "SymbianOS", "Windows Phone",
+      "iPad", "iPod"];
+   var flag = true;
+   for (var v = 0; v < Agents.length; v++) {
+      if (userAgentInfo.indexOf(Agents[v]) > 0) {
+         flag = false;
+         break;
+      }
+   }
+   return flag;
+}
+</script>
+
 
 <style lang="less">
 body {
@@ -278,9 +399,23 @@ body {
       }
       span {
         margin-top: 2em;
+        .message {
+          margin-top: 1em;
+          display: none;
+        }
       }
+      &:hover {
+        .message {
+          display: block;
+          cursor: pointer;
+          &:hover {
+            color:#4776E6;
+          }
+        }
+      }      
     }
   }
+  margin-bottom: 300px;
 }
 
 </style>
@@ -336,70 +471,3 @@ body {
   }
 }
 </style>
-<script lang="ts" setup>
-import Header from './components/Header.vue';
-import {ref,onMounted} from 'vue'
-
-const left = ref(0)
-const list = ref([
-  '/src/assets/post1.png',
-  '/src/assets/post2.jpeg',
-  '/src/assets/post3.png',
-  '/src/assets/post4.jpeg',
-  '/src/assets/post5.jpeg',
-  '/src/assets/post6.png',
-  '/src/assets/post7.jpeg',
-
-  '/src/assets/post1.png',
-  '/src/assets/post2.jpeg',
-  '/src/assets/post3.png',
-  '/src/assets/post4.jpeg',
-  '/src/assets/post5.jpeg',
-  '/src/assets/post6.png',
-  '/src/assets/post7.jpeg',
-  
-  '/src/assets/post1.png',
-  '/src/assets/post2.jpeg',
-  '/src/assets/post3.png',
-  '/src/assets/post4.jpeg',
-  '/src/assets/post5.jpeg',
-  '/src/assets/post6.png',
-  '/src/assets/post7.jpeg',
-
-  '/src/assets/post1.png',
-  '/src/assets/post2.jpeg',
-  '/src/assets/post3.png',
-  '/src/assets/post4.jpeg',
-  '/src/assets/post5.jpeg',
-  '/src/assets/post6.png',
-  '/src/assets/post7.jpeg',
-  
-  '/src/assets/post1.png',
-  '/src/assets/post2.jpeg',
-  '/src/assets/post3.png',
-  '/src/assets/post4.jpeg',
-  '/src/assets/post5.jpeg',
-  '/src/assets/post6.png',
-  '/src/assets/post7.jpeg',
-  
-  '/src/assets/post1.png',
-  '/src/assets/post2.jpeg',
-  '/src/assets/post3.png',
-  '/src/assets/post4.jpeg',
-  '/src/assets/post5.jpeg',
-  '/src/assets/post6.png',
-  '/src/assets/post7.jpeg',  
-])
-let count = 0
-onMounted(()=> {
-  setInterval(()=> {
-    count += 1
-    left.value -= 0.5
-    if (count == 3000) {
-      left.value = 0
-    }
-  },10)  
-})
-</script>
-
-
