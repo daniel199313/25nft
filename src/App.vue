@@ -1,250 +1,405 @@
 <template>
-<div class="header">
-  <div class="box">
-    <div class="left">
-      <div class="slogan">
-            紫荊與你 <br>
-      堅定夢想, 踏實前行
-      </div>
-      <div class="small">
-      慶回歸紀念NFT
-      </div>
-      <div class="small2">限量 2500 枚</div>
+<Header/>
 
-      <div class="timer-plan">
-        <div class="title">
-          Registration open in:   
-        </div> 
-        <div class="timer">
-          <div class="util">
-            <div class="number">{{day}}</div>
-            <div class="ut">Days</div>
-          </div>
-          <div class="symbol">:</div>
+<div class="section-1 container">
+  <img src="/src/assets/block-1.png" alt=""/>
+  <img src="/src/assets/block-2.svg" alt=""/>
+</div>
+<div class="section-2 container">
+  <div class="line">
+    <img src="/src/assets/icon/user.svg" alt="" class="icon">
+    登入《紫荊》雜誌手機 APP
+  </div>
+  <div class="line">
+    <img src="/src/assets/icon/gift.svg" alt="" class="icon">
+    NFT 空投到你的小狐狸錢包
+  </div>
+  <div class="line">
+    <img src="/src/assets/icon/edit.svg" alt="" class="icon">
+    填寫
+    <img src="/src/assets/icon/metamask.svg" alt="" class="icon">
+    小狐狸錢包地址 (ETH)
+  </div>
+  <div class="line">
+    <img src="/src/assets/icon/setting.svg" alt="" class="icon">
+    轉讓和上架 OpenSea Marketplace 你的 NFT
+  </div>            
+</div>
 
-          <div class="util">
-            <div class="number">{{hours}}</div>
-            <div class="ut">Hours</div>
-          </div>
-          <div class="symbol">:</div>
-
-          <div class="util">
-            <div class="number">{{minutes}}</div>
-            <div class="ut">Minutes</div>
-          </div>
-          <div class="symbol">:</div>
-
-          <div class="util">
-            <div class="number">{{seconds}}</div>
-            <div class="ut">Seconds</div>
-          </div>                            
-        </div>
-      </div>
-
+<div class="section-3">
+  完成登記後，你的錢包地址會被列入空投名單，<span>你就可以在 7 月 10 日前收到屬於你自己的 NFT </span>。
+  收到後，您便能進行轉讓和上架 OpenSea Marketplace 等操作。
+</div>
+<div class="section-4 container">
+  <div class="btn-group">
+    <img src="/src/assets/icon/mobile.svg" alt="">
+    <div class="text">
+      <div class="text1">限量空投, 先到先得</div>
+      <hr>
+      <div class="text2">記得在 7 月 1 日後回來看空投名單哦!</div>
     </div>
-
-    <div class="qrcode">
-      <img  src="./qrcode.svg" alt="">
-      <span>
-      登入紫荊 App 免費收到 " 永遠盛開的紫荊花" NFT
-      </span>
-    </div>
+    <button disabled="true">
+      <div class="mash"></div>
+      馬上登記，免費空投
+    </button>
   </div>
 </div>
+<div class="section-5">
+  <h1><span>《紫荊》</span>雜誌</h1>
+  <div>創刊於1990年10月，是香港出版的一本以政治、經濟、新聞評論為主，<br> 集社會、民生、軍事、文化、歷史等多方面內容的綜合性新聞月刊．</div>    
+</div>
+<div class="container section-6">
+   <div class="list" :style="{
+     marginLeft: left + 'px',
+   }">
+    <div class="item" v-for="(item,index) in list">
+      <img :key="index" :src="item" alt="">
+    </div>                  
+  </div> 
+</div>
+
+<div class="container section-7">
+  <h1>Airdrop is Coming!</h1>
+  <div class="list">
+    <div class="item">
+      <img src="/src/assets/icon/icon-1.svg" alt="">
+      <span>
+        下載紫荊雜誌 APP
+      </span>
+    </div>
+    <div class="item">
+      <img src="/src/assets/icon/icon-2.svg" alt="">
+      <span>
+        下載小狐狸錢包
+      </span>
+    </div>
+    <div class="item">
+      <img src="/src/assets/icon/icon-3.svg" alt="">
+      <span>
+        免費得到 ETH 錢包地址
+      </span>
+    </div>
+    <div class="item">
+      <img src="/src/assets/icon/icon-4.svg" alt="">
+      <span>
+        查詢空投結果
+      </span>
+    </div>
+    <div class="item">
+      <img src="/src/assets/icon/icon-5.svg" alt="">
+      <span>
+        領取 NFT
+      </span>
+    </div>
+    <div class="item">
+      <img src="/src/assets/icon/icon-6.svg" alt="">
+      <span>
+        查看你的 NFT
+      </span>
+    </div>                      
+
+  </div>
+</div>
+
+
 </template>
 
 <style lang="less">
 body {
   padding: 0;
   margin: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
 }
-.header {
-  width: 100vw;
-  height: 100vh;
+.container {
+  max-width: 1440px;
   margin: 0 auto;
-  position: relative;
-  background-image: url(/src/assets/images/bg-zijinghua.svg);
-  background-size: cover;
-  background-attachment: fixed;
+}
 
-  .box {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    .qrcode {
-      bottom: 0;
-      left: 0;
-      position: absolute;
-      span {
-        color: #fff;
-        font-size: 24px;
-        font-weight: 600;
-        padding: 0.7rem;
-      }
-      display: flex;
-      align-items: flex-end;
-    }
-    .left {
-      padding:20px;
-      max-width: 1440px;
-      height: 100vh;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      .slogan {
-        /* 紫荊與你 堅定夢想, 踏實前行 */
+.section-1 {
+  display: flex;
+  justify-content: space-around;
+  margin-top:60px;
+  img {
+    width: 512px;
+    margin:0.5em;
+    border-radius: 25px;
+  }
+  flex-wrap: wrap;
+}
 
-        // position: absolute;
-        width: 366px;
-        // height: 96px;
-        // left: 136px;
-        // top: 95px;
-
-        /* Headling */
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 40px;
-        line-height: 48px;
-        letter-spacing: -0.04em;
-
-        /* 1Box_Exchange_Orange_Gradient */
-        background: linear-gradient(90deg, #E65C00 0%, #F9D423 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-fill-color: transparent;
-      }
-      .small {
-        /* 慶回歸紀念NFT */
-
-        /* Title 1 */
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 24px;
-        line-height: 29px;
-        /* identical to box height */
-
-        /* 1Box_White */
-        color: #FFFFFF;
-        margin-top: 8px;
-      }
-      .small2 {
-
-        /* Title 2 */
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 300;
-        font-size: 20px;
-        line-height: 150%;
-        /* identical to box height, or 30px */
-
-        /* 1Box_White */
-        color: #FFFFFF;
-        margin-top: 24px;
-      }
-
-    }
+.section-2 {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  img {
+    max-width: 85vw;
+  }
+  margin-top: 61px;
+  .line {
+    width: 45%;
+    line-height: 2em;
+    text-align: center;
+    color: #979797;
+    font-family: 'Inter';
+    font-style: normal;
   }
 }
-.timer-plan {
-    /* Registration open in: */
+
+.section-3 {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 1em;
 
   /* Title 2 */
   font-family: 'Inter';
-  font-style: normal;
-  font-weight: 300;
-  font-size: 20px;
+
+  // font-size: 20px;
   line-height: 150%;
-  /* identical to box height, or 30px */
+  /* or 30px */
+  text-align: center;
 
-  /* 1Box_White */
-  color: #FFFFFF;
-  margin-top: 66px;
-  .timer {
+  /* 1Box Dark Grey */
+  color: #979797;
+  span {
+    color:#4776E6;
+  }
+}
+
+.section-4 {
+  padding: 0 1em;
+  .btn-group {
+    background: linear-gradient(90deg, #4776E6 0%, #8E54E9 100%);
+    padding:1em;
+    border-radius: 5em;
     display: flex;
-    margin-top: 17px;
-    .util {
-      width: 50px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      
-
-      .number {
-        /* Subheading */
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 30px;
-        line-height: 36px;
-        color: #F7941E;
-      }
-      .ut {
-        /* Overline */
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 10px;
-        line-height: 12px;
-        text-align: center;
-
-        /* 1Box_White */
-        color: #FFFFFF;
-
-        opacity: 0.5;
-        margin-top: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+    hr {
+      opacity: 0.2;
+    }
+    img {
+      width: 115px;
+      display: block;
+    }
+    .text {
+      color: #fff;
+      padding: 0 1em;
+      flex: 1;
+      .text2 {
+        text-align: right;
       }
     }
-    .symbol {
-      /* Subheading */
+    button {
+      border: none;
+      outline: none;
       font-family: 'Inter';
       font-style: normal;
-      font-weight: 500;
-      font-size: 30px;
-      line-height: 36px;
-      /* 1Box_White */
-      color: #FFFFFF;
-      width: 30px;
+      font-weight: 400;
+      font-size: 14.9965px;
       text-align: center;
+      background: linear-gradient(90deg, #5490E9 0%, #EC008C 100%);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 6px; 
+      width: 281px;
+      height: 50px;   
+      margin-right:50px ;        
+
+      /* 1Box_White */
+
+      color: #FFFFFF;
+
+
+      /* Inside auto layout */
+
+      flex: none;
+      order: 0;
+      flex-grow: 0; 
+      position: relative;   
+      overflow: hidden;
+      .mash {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 100;
+        background: rgba(0, 0, 0, 0.25);
+      }  
     }
   }
 }
-</style>
 
-<script setup lang="ts">
-import { computed, onUnmounted, ref } from 'vue';
-import moment from 'moment';
-
-const S = 1
-const M = S * 60
-const H = M * 60
-const D = H * 24
-
-function dateFormatStr (time:string) {  //time为 yyyy-mm-dd格式日期
-  return moment(time,'YYYY-MM-DD HH:mm:ss').toDate()
+.section-5 {
+  margin-top: 52px;
+  text-align: center;
+  color: #979797;
+  padding: 1em;
+  h1 {
+    color: #3b3b3b;
+    span {
+      font-size: 30px;
+      color:#4776E6;
+    }
+  }
 }
 
-const endTime = dateFormatStr('2022-06-15 00:00:00')
+.section-6 {
+  overflow-x: hidden;
+  .list {
+    display: flex;
+    margin-top: 90px;
+    padding: 1em;
+    width:9000vw;  
+    .item {
+      margin: 1em;
+      box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+      width: 270px;
+      img {
+        width: 100%;
+      }      
+    }
+  }
+}
 
-const timecount = ref(0)
+.section-7 {
+  text-align: center;
+  .list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    .item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #979797;
+      margin-top: 48px;
+      width: 170px;
+      img {
+        width: 70px;
+      }
+      span {
+        margin-top: 2em;
+      }
+    }
+  }
+}
 
-let day = computed(()=>Math.floor(timecount.value / D))
-let hours = computed(()=>Math.floor(timecount.value % D / H))
-let minutes = computed(()=>Math.floor(timecount.value % D % H / M))
-let seconds = computed(()=>Math.floor(timecount.value % D % H % M))
+</style>
+<style lang="less">
+@media screen and (max-width: 414px) {
+  .section-1 {
+    margin-top: 1em;
+    img {
+      width: 85vw;
+    }
+  }
+  .section-2 {
+    .line {
+      width: 85%;
+    }
+  }
+  .section-4 {
+    .btn-group {
+      flex-direction: column;
+      border-radius: 25px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      .text {
+        text-align: center;
+        padding: 1em 0;
+        box-sizing: border-box;
+        width: 100%;
+        .text1,.text2 {
+          text-align: center;
+        }
+      }
+      button {
+        width: 100%;
+        margin: 0;
+      }
+    }
+  }
+  .section-6 {
+  .list {
+    display: flex;
+    margin-top: 40px;
+    width:9000vw;  
+    .item {
+      margin: 1em;
+      box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+      width: 150px;
+      img {
+        width: 100%;
+      }      
+    }
+  }
+  }
+}
+</style>
+<script lang="ts" setup>
+import Header from './components/Header.vue';
+import {ref,onMounted} from 'vue'
 
-const timer = setInterval(()=> {
-  timecount.value = (endTime.getTime() - Date.now())/1000
-},1000)
+const left = ref(0)
+const list = ref([
+  '/src/assets/post1.png',
+  '/src/assets/post2.jpeg',
+  '/src/assets/post3.png',
+  '/src/assets/post4.jpeg',
+  '/src/assets/post5.jpeg',
+  '/src/assets/post6.png',
+  '/src/assets/post7.jpeg',
 
-onUnmounted(()=> clearInterval(timer))
+  '/src/assets/post1.png',
+  '/src/assets/post2.jpeg',
+  '/src/assets/post3.png',
+  '/src/assets/post4.jpeg',
+  '/src/assets/post5.jpeg',
+  '/src/assets/post6.png',
+  '/src/assets/post7.jpeg',
+  
+  '/src/assets/post1.png',
+  '/src/assets/post2.jpeg',
+  '/src/assets/post3.png',
+  '/src/assets/post4.jpeg',
+  '/src/assets/post5.jpeg',
+  '/src/assets/post6.png',
+  '/src/assets/post7.jpeg',
 
+  '/src/assets/post1.png',
+  '/src/assets/post2.jpeg',
+  '/src/assets/post3.png',
+  '/src/assets/post4.jpeg',
+  '/src/assets/post5.jpeg',
+  '/src/assets/post6.png',
+  '/src/assets/post7.jpeg',
+  
+  '/src/assets/post1.png',
+  '/src/assets/post2.jpeg',
+  '/src/assets/post3.png',
+  '/src/assets/post4.jpeg',
+  '/src/assets/post5.jpeg',
+  '/src/assets/post6.png',
+  '/src/assets/post7.jpeg',
+  
+  '/src/assets/post1.png',
+  '/src/assets/post2.jpeg',
+  '/src/assets/post3.png',
+  '/src/assets/post4.jpeg',
+  '/src/assets/post5.jpeg',
+  '/src/assets/post6.png',
+  '/src/assets/post7.jpeg',  
+])
+let count = 0
+onMounted(()=> {
+  setInterval(()=> {
+    count += 1
+    left.value -= 0.5
+    if (count == 3000) {
+      left.value = 0
+    }
+  },10)  
+})
 </script>
+
+
