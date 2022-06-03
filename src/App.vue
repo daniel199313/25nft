@@ -2,8 +2,8 @@
 <Header/>
 
 <div class="section-1 container">
-  <img src="/src/assets/block-1.svg" alt=""/>
-  <img src="/src/assets/block-2.svg" alt=""/>
+  <img src="/src/assets/block-1.png" alt=""/>
+  <img src="/src/assets/block-2.png" alt=""/>
 </div>
 <div class="section-2 container">
   <div class="line">
@@ -128,7 +128,7 @@
 </div>
 
 <Alert :show="showAlert" title="Ooops. 手機 APP， 一定要用手機下載哦！" text="2500 NFTs 免費送出, 先到先得！" @ok="()=>closeAlert()"></Alert>
-<a class="floor" href="https://www.1boxnft.com"><img src="/src/assets/icon/onebox.svg" alt=""> 由1box提供技术支持</a>
+<a class="floor" href="https://www.1boxnft.com"><img src="/src/assets/icon/onebox.svg" alt=""> 提供技術支持</a>
 </template>
 
 <script lang="ts" setup>
@@ -396,6 +396,7 @@ body {
       color: #979797;
       margin-top: 48px;
       width: 170px;
+      position: relative;
       img {
         width: 70px;
       }
@@ -408,6 +409,7 @@ body {
       }
       &:hover {
         .message {
+          position: absolute;
           display: block;
           cursor: pointer;
           &:hover {
@@ -427,8 +429,9 @@ body {
   justify-content: center;
   color: #fff;
   text-decoration: none;
+  padding: 0.25em;
   img {
-    width: 3rem;
+    margin: 0.5em;
   }
 }
 
