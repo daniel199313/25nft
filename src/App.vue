@@ -410,7 +410,12 @@ body {
       &:hover {
         .message {
           position: absolute;
+          z-index: 1000;
+          background-color: #fff5;
           display: block;
+          padding: 0.5em;
+          backdrop-filter: blur(5px);
+
           cursor: pointer;
           &:hover {
             color:#4776E6;
