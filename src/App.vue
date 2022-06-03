@@ -2,7 +2,7 @@
 <Header/>
 
 <div class="section-1 container">
-  <img src="/src/assets/block-1.png" alt=""/>
+  <img src="/src/assets/block-1.svg" alt=""/>
   <img src="/src/assets/block-2.svg" alt=""/>
 </div>
 <div class="section-2 container">
@@ -123,10 +123,12 @@
     </div>                      
 
   </div>
+
+
 </div>
 
 <Alert :show="showAlert" title="Ooops. 手機 APP， 一定要用手機下載哦！" text="2500 NFTs 免費送出, 先到先得！" @ok="()=>closeAlert()"></Alert>
-
+<a class="floor" href="https://www.1boxnft.com"><img src="/src/assets/icon/onebox.svg" alt=""> 由1box提供技术支持</a>
 </template>
 
 <script lang="ts" setup>
@@ -416,6 +418,18 @@ body {
     }
   }
   margin-bottom: 300px;
+}
+
+.floor {
+  background-color: #8E54E9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  img {
+    width: 3rem;
+  }
 }
 
 </style>
