@@ -432,7 +432,7 @@ body {
       }      
     }
   }
-  margin-bottom: 250px;
+  margin-bottom: 150px;
 }
 
 .floor {
