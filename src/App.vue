@@ -413,7 +413,6 @@ body {
         width: 100%;
         .message {
           margin-top: 1em;
-          // display: none;
           display: block;
           position: absolute;
           z-index: 1000;
@@ -421,7 +420,6 @@ body {
           display: block;
           padding: 0.5em;
           backdrop-filter: blur(5px);
-
           cursor: pointer;          
         }
       }
