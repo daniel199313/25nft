@@ -61,62 +61,62 @@
 <div class="container section-7">
   <h1>Airdrop is Coming!</h1>
   <div class="list">
-    <div class="item">
+    <div class="item" @click="openMessage(0)">
       <img src="/src/assets/icon/icon-1.svg" alt="">
       <span>
         下載紫荊雜誌 APP
 
-        <div class="message" @click="openDownloadApp">
+        <div  v-if="active==0" class="message" @click="openDownloadApp">
           官方下載《紫荊》手機 APP
         </div>
       </span>
     </div>
-    <div class="item">
+    <div class="item" @click="openMessage(1)">
       <img src="/src/assets/icon/icon-2.svg" alt="">
       <span>
         下載小狐狸錢包
 
-        <a class="message" href="https://metamask.io/download/" target="_blank">
+        <a v-if="active==1" class="message" href="https://metamask.io/download/" target="_blank">
           官方下載 小狐狸錢包 手機 APP。
         </a>
       </span>
     </div>
-    <div class="item">
+    <div class="item" @click="openMessage(2)">
       <img src="/src/assets/icon/icon-3.svg" alt="">
       <span>
         免費得到 ETH 錢包地址
 
-        <a target="_blank" href="https://1box.gitbook.io/1box-support/guide/how-to-use-metamask-on-mobile#step-2-set-up-network" class="message">
+        <a v-if="active==2" target="_blank" href="https://1box.gitbook.io/1box-support/guide/how-to-use-metamask-on-mobile#step-2-set-up-network" class="message">
         1Box Exchange 手把手教你創建和設置 小狐狸 ETH 錢包。
         </a>
       </span>
     </div>
-    <div class="item">
+    <div class="item" @click="openMessage(3)">
       <img src="/src/assets/icon/icon-4.svg" alt="">
       <span>
         查詢空投結果
 
-        <div class="message">
+        <div  v-if="active==3" class="message">
           7 月 1 日 香港時間 10 AM 後, 在《紫荊》手機 APP 查看
         </div>
       </span>
     </div>
-    <div class="item">
+    <div class="item" @click="openMessage(4)">
       <img src="/src/assets/icon/icon-5.svg" alt="">
       <span>
         領取 NFT
 
-        <div class="message">
+        <div  v-if="active==4" class="message">
         最快完成登記的 2500 位幸運兒，紫荊 將在 7 月 10 日前, 直接發送到你的 ETH 錢包。        
         </div>
       </span>
     </div>
-    <div class="item">
+    <div class="item" @click="openMessage(5)">
       <img src="/src/assets/icon/icon-6.svg" alt="">
       <span>
         查看你的 NFT
 
-        <div class="message">
+        <div  v-if="active==5" class="message">
           收到後, 屬於你的, 世界獨一的 NFT 會馬上在小狐狸錢包看到。 
         </div>
       </span>
@@ -144,6 +144,7 @@ import post6 from '/src/assets/post6.png'
 import post7 from '/src/assets/post7.jpeg'
 
 const left = ref(0)
+const active = ref(-1)
 const list = ref([
   post1,
   post2,
@@ -222,6 +223,13 @@ function isPcOrMb() {
       }
    }
    return flag;
+}
+function openMessage(act:number) {
+  if (active.value != act) {
+    active.value = act
+  } else {
+    active.value = -1
+  }
 }
 </script>
 
@@ -402,13 +410,11 @@ body {
       }
       span {
         margin-top: 2em;
+        width: 100%;
         .message {
           margin-top: 1em;
-          display: none;
-        }
-      }
-      &:hover {
-        .message {
+          // display: none;
+          display: block;
           position: absolute;
           z-index: 1000;
           background-color: #fff5;
@@ -416,7 +422,11 @@ body {
           padding: 0.5em;
           backdrop-filter: blur(5px);
 
-          cursor: pointer;
+          cursor: pointer;          
+        }
+      }
+      &:hover {
+        .message {
           &:hover {
             color:#4776E6;
           }
@@ -424,7 +434,7 @@ body {
       }      
     }
   }
-  margin-bottom: 300px;
+  margin-bottom: 250px;
 }
 
 .floor {

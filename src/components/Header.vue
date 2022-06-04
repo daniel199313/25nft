@@ -4,7 +4,7 @@
   <img class="bg-m" src="/src/assets/images/banner-m.jpg" alt="">
   <div class="box">
     <div class="timer-plan">
-      <div class="title">Registrate open in</div>
+      <div class="title">Registration Opens in</div>
       <div class="timer">
         <div class="number">{{day}}</div>
      
