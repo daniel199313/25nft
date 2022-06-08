@@ -86,7 +86,7 @@
       <span>
         免費得到 ETH 錢包地址
 
-        <a v-if="active==2" target="_blank" href="https://1box.gitbook.io/1box-support/guide/how-to-use-metamask-on-mobile#step-2-set-up-network" class="message">
+        <a v-if="active==2" target="_blank" href="https://1box.gitbook.io/1box-support/v/zh/guide/whats-next/zai-shou-ji-shi-yong-metamask-qian-bao" class="message">
         1Box Exchange 手把手教你創建和設置 小狐狸 ETH 錢包。
         </a>
       </span>
