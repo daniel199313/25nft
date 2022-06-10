@@ -38,9 +38,14 @@
       <hr>
       <div class="text2">記得在 7 月 1 日後回來看空投名單哦!</div>
     </div>
-    <button disabled="true">
+    <button v-if="getStage()!= 1" disabled="true">
       <div class="mash"></div>
       6 月 15 日 00:00 準時開搶！
+    </button>
+    <button v-else @click="()=>{
+      openZijinApp()
+    }">
+    馬上登記，免費空投
     </button>
   </div>
 </div>
@@ -134,6 +139,7 @@
 <script lang="ts" setup>
 import Header from './components/Header.vue';
 import {ref,onMounted} from 'vue'
+import {getNextStageSec,getStage} from './components/timelist'
 import Alert from './components/Alert.vue';
 import post1 from '/src/assets/post1.png'
 import post2 from '/src/assets/post2.jpeg'
@@ -200,6 +206,9 @@ onMounted(()=> {
 const showAlert = ref(false)
 const closeAlert = ()=> {
   showAlert.value = false
+}
+const openZijinApp = ()=> {
+  window.open('https://bau.com.hk/download.html?infoViewUrl=https://event.bau.com.hk/act/sign/indexV2.html?actCode=jjOcDVzmw8cQMZU9HkWwCCjENEi0xu&isApp=app&isOpenApp=1')
 }
 
 const openDownloadApp = ()=> {

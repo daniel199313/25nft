@@ -4,7 +4,9 @@
   <img class="bg-m" src="/src/assets/images/banner-m.jpg" alt="">
   <div class="box">
     <div class="timer-plan">
-      <div class="title">Registration Opens in</div>
+      <div class="title">Registration {{
+        getStage() == 0 ? 'Opens': 'Close'
+      }} in</div>
       <div class="timer">
         <div class="number">{{day}}</div>
      
@@ -35,20 +37,17 @@
 
 <script setup lang="ts">
 import { computed, onUnmounted, ref } from 'vue';
-import moment from 'moment';
+import {getNextStageSec,getStage} from './timelist'
 
 const S = 1
 const M = S * 60
 const H = M * 60
 const D = H * 24
 
-function dateFormatStr (time:string) {  //time为 yyyy-mm-dd格式日期
-  return moment(time,'YYYY-MM-DD HH:mm:ss').toDate()
-}
 
-const endTime = dateFormatStr('2022-06-15 00:00:00')
 
-const timecount = ref(0)
+
+const timecount = ref(getNextStageSec())
 
 let day = computed(()=>Math.floor(timecount.value / D))
 let hours = computed(()=>Math.floor(timecount.value % D / H))
@@ -56,7 +55,7 @@ let minutes = computed(()=>Math.floor(timecount.value % D % H / M))
 let seconds = computed(()=>Math.floor(timecount.value % D % H % M))
 
 const timer = setInterval(()=> {
-  timecount.value = (endTime.getTime() - Date.now())/1000
+  timecount.value -= 1
 },1000)
 
 onUnmounted(()=> clearInterval(timer))
