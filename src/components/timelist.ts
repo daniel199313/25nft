@@ -2,6 +2,7 @@
 // 活动开始时间
 export const startTime = ()=> {
   const startTime = new Date(Date.now())
+  startTime.setUTCMonth(6)
   startTime.setUTCDate(15)
   startTime.setUTCHours(8)
   startTime.setUTCSeconds(0)
@@ -12,6 +13,7 @@ export const startTime = ()=> {
 // 活动结束时间
 export const endTime = ()=> {
   const endTime = new Date(Date.now())
+  endTime.setUTCMonth(6)
   endTime.setUTCDate(30)
   endTime.setUTCHours(8)
   endTime.setUTCSeconds(0)
