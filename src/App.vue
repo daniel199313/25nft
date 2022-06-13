@@ -38,7 +38,7 @@
       <hr>
       <div class="text2">記得在 7 月 1 日後回來看空投名單哦!</div>
     </div>
-    <button v-if="getStage()!= 1" disabled="true">
+    <button v-if="stage != 1" disabled="true">
       <div class="mash"></div>
       6 月 15 日 00:00 準時開搶！
     </button>
@@ -139,7 +139,7 @@
 <script lang="ts" setup>
 import Header from './components/Header.vue';
 import {ref,onMounted} from 'vue'
-import {getNextStageSec,getStage} from './components/timelist'
+import {getNextStageSec,getStage,debug} from './components/timelist'
 import Alert from './components/Alert.vue';
 import post1 from '/src/assets/post1.png'
 import post2 from '/src/assets/post2.jpeg'
@@ -151,6 +151,13 @@ import post7 from '/src/assets/post7.jpeg'
 
 const left = ref(0)
 const active = ref(-1)
+const stage = ref(getStage())
+
+setInterval(()=> {
+  stage.value = getStage()
+  debug()
+},1000)
+
 const list = ref([
   post1,
   post2,
@@ -208,14 +215,14 @@ const closeAlert = ()=> {
   showAlert.value = false
 }
 const openZijinApp = ()=> {
-  window.open('https://bau.com.hk/download.html?infoViewUrl=https://event.bau.com.hk/act/sign/indexV2.html?actCode=jjOcDVzmw8cQMZU9HkWwCCjENEi0xu&isApp=app&isOpenApp=1')
+  openDownloadApp('https://bau.com.hk/download.html?infoViewUrl=https://event.bau.com.hk/act/sign/indexV2.html?actCode=jjOcDVzmw8cQMZU9HkWwCCjENEi0xu&isApp=app&isOpenApp=1')
 }
 
-const openDownloadApp = ()=> {
+const openDownloadApp = (url='https://bau.com.hk/nmapp')=> {
   if (isPcOrMb()) {
     showAlert.value = true
   } else {
-    window.open('https://bau.com.hk/nmapp','_blank')
+    window.open(url,'_blank')
   }
 }
 

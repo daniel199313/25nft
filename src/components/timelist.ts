@@ -1,49 +1,40 @@
 
 // 活动开始时间
-export const startTime = ()=> {
-  const startTime = new Date(Date.now())
-  startTime.setUTCMonth(6)
-  startTime.setUTCDate(15)
-  startTime.setUTCHours(8)
-  startTime.setUTCSeconds(0)
-  startTime.setUTCMinutes(0)
-  
-  return startTime 
-}
-// 活动结束时间
-export const endTime = ()=> {
-  const endTime = new Date(Date.now())
-  endTime.setUTCMonth(6)
-  endTime.setUTCDate(30)
-  endTime.setUTCHours(8)
-  endTime.setUTCSeconds(0)
-  endTime.setUTCMinutes(0)
+const startTime = new Date(Date.now())
+startTime.setMonth(5)
+startTime.setDate(15)
+startTime.setHours(0)
+startTime.setSeconds(0)
+startTime.setMinutes(0)
 
-  // endTime.setSeconds(27)
-  return endTime
-}
+const endTime = new Date(Date.now())
+endTime.setMonth(5)
+endTime.setDate(30)
+endTime.setHours(0)
+endTime.setSeconds(0)
+endTime.setMinutes(0)
 
 // 获取当前所处阶段
 export const getStage = ()=> {
   
-  if (Date.now()<startTime().getTime() && Date.now()<endTime().getTime()) {
+  if (Date.now()-startTime.getTime() < 0) {
     return 0
-  }
-  if (Date.now() < endTime().getTime()) {
+  } else if (Date.now() - endTime.getTime() < 0) {
     return 1
   }
-  return 0
 }
 
  // 获取下一个阶段时间的秒数
 export const getNextStageSec = ()=> {
   const t = getStage() == 0 ? startTime:endTime
-  const v =(t().getTime() - Date.now())/1000
+  const v =(t.getTime() - Date.now())/1000
   if (v <= 0) {
     return 0
   }
   return v
 }
 export const debug = () => {
-  console.log('sec',getNextStageSec(),'stage', getStage(), startTime().getTime(),endTime().getTime(),Date.now())
+  const start = startTime.getTime()
+  const end = endTime.getTime()
+  console.log('sec',getNextStageSec(),'stage', getStage(), start/1000,end/1000,Date.now()/1000)
 }
