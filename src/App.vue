@@ -71,7 +71,7 @@
       <span>
         下載紫荊雜誌 APP
 
-        <div  v-if="active==0" class="message" @click="openDownloadApp">
+        <div  v-if="active==0" class="message" @click="()=>openDownloadApp()">
           官方下載《紫荊》手機 APP
         </div>
       </span>
