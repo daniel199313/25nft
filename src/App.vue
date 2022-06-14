@@ -451,7 +451,6 @@ body {
       }      
     }
   }
-  margin-bottom: 48px;
 }
 
 </style>

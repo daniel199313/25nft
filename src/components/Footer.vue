@@ -43,12 +43,14 @@
   img {
     margin: 0.5em;
   }
+  margin-top: 2em;
 }
 .zanzhu {
   padding: 1rem;
   .row {
+    margin-top: 48px;
     .title-h {
-      font-size: 2em;
+      font-size: 1.2em;
     }
     .content {
       display: flex;   
