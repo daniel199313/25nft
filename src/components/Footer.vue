@@ -6,7 +6,7 @@
       <img class="heban_item" src="/src/assets/香港各界慶典委員會logo.jpg" alt=""/>
       <img class="heban_item title" src="/src/assets/廣西社團總會_logo-1.png" alt=""/>
       <img class="heban_item title" src="/src/assets/江蘇社團總會_logo.jpg" alt=""/>
-      <img class="heban_item title" src="/src/assets/滬港logo_style 01-ok.png" alt=""/>
+      <img class="heban_item title" src="/src/assets/hglogo.png" alt=""/>
       <img class="heban_item" src="/src/assets/湖南.png" alt=""/>
       <img class="heban_item title" src="/src/assets/湖北社團總會.png" alt=""/>
       <img class="heban_item" src="/src/assets/山東社團總會.png" alt=""/>
@@ -21,7 +21,7 @@
   <div class="row">
     <div class="title-h">協辦:</div>  
     <div class="content">
-      <img class="heban_item title" src="/src/assets/CMI_logo_set_colour_Horizontal (Bilingual).png" alt=""/>
+      <img class="heban_item title" src="/src/assets/CMI_logo_set_colour_Horizontal(Bilingual).png" alt=""/>
       <img class="heban_item " src="/src/assets/dhgj.png" alt=""/>
       <img class="heban_item title" src="/src/assets/dcgj.png" alt=""/>
       <img class="heban_item title" src="/src/assets/wis.png" alt=""/>
