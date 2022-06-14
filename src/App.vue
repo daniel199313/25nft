@@ -324,7 +324,7 @@ body {
 }
 
 .section-4 {
-  margin-top: 1em;
+  margin-top: 2em;
   padding: 0 1em;
   .btn-group {
     background: linear-gradient(90deg, #4776E6 0%, #8E54E9 100%);
