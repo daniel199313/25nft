@@ -218,7 +218,7 @@ const closeAlert = ()=> {
   showAlert.value = false
 }
 const openZijinApp = ()=> {
-  openDownloadApp('https://event.bau.com.hk/act/sign/indexV2.html?actCode=0hdTbL7HpnfDCeWQeeyS6LNRchbztH&isApp=app&isOpenApp=1')
+  openDownloadApp('https://bau.com.hk/col10608416.html?infoViewUrl=https://event.bau.com.hk/act/sign/signV2.html?actCode=0hdTbL7HpnfDCeWQeeyS6LNRchbztH')
   axios.get('api/lark',{
     baseURL: import.meta.env.MODE === 'development'? 'https://tapi.99box.co/':'https://server.1boxnft.com/'
     // baseURL: 'https://tapi.99box.co/'
