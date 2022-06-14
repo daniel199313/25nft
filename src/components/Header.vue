@@ -54,11 +54,14 @@ let hours = computed(()=>Math.floor(timecount.value % D / H))
 let minutes = computed(()=>Math.floor(timecount.value % D % H / M))
 let seconds = computed(()=>Math.floor(timecount.value % D % H % M))
 
-const timer = setInterval(()=> {
-  timecount.value -= 1
-},1000)
+if (getStage()<2) {
+  const timer = setInterval(()=> {
+    timecount.value -= 1
+  },1000)  
+  onUnmounted(()=> clearInterval(timer))
+}
 
-onUnmounted(()=> clearInterval(timer))
+
 
 </script>
 

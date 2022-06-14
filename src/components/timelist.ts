@@ -21,6 +21,8 @@ export const getStage = ()=> {
     return 0
   } else if (Date.now() - endTime.getTime() < 0) {
     return 1
+  } else {
+    return 2
   }
 }
 

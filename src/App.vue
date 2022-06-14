@@ -38,11 +38,11 @@
       <hr>
       <div class="text2">記得在 7 月 1 日後回來看空投名單哦!</div>
     </div>
-    <button v-if="stage != 1" disabled="true">
+    <button v-if="stage == 0" disabled="true">
       <div class="mash"></div>
       6 月 15 日 00:00 準時開搶！
     </button>
-    <button v-else @click="()=>{
+    <button v-else-if="stage == 1" @click="()=>{
       openZijinApp()
     }">
     馬上登記，免費空投
