@@ -133,13 +133,15 @@
 </div>
 
 <Alert :show="showAlert" title="Ooops. 手機 APP， 一定要用手機下載哦！" text="2500 NFTs 免費送出, 先到先得！" @ok="()=>closeAlert()"></Alert>
-<a class="floor" href="https://www.1boxnft.com"><img src="/src/assets/icon/onebox.svg" alt=""> 提供技術支持</a>
+<Footer/>
 </template>
 
 <script lang="ts" setup>
 import Header from './components/Header.vue';
 import {ref,onMounted} from 'vue'
 import {getNextStageSec,getStage,debug} from './components/timelist'
+import Footer from './components/Footer.vue'
+
 import Alert from './components/Alert.vue';
 import post1 from '/src/assets/post1.png'
 import post2 from '/src/assets/post2.jpeg'
@@ -432,7 +434,8 @@ body {
           display: block;
           position: absolute;
           z-index: 1000;
-          background-color: #fff5;
+          background-color: #fffe;
+          border-radius: 10px;
           display: block;
           padding: 0.5em;
           backdrop-filter: blur(5px);
@@ -448,20 +451,7 @@ body {
       }      
     }
   }
-  margin-bottom: 150px;
-}
-
-.floor {
-  background-color: #8E54E9;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  text-decoration: none;
-  padding: 0.25em;
-  img {
-    margin: 0.5em;
-  }
+  margin-bottom: 48px;
 }
 
 </style>
