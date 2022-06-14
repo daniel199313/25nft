@@ -9,7 +9,7 @@
       <img class="heban_item title" src="/src/assets/滬港logo_style 01-ok.png" alt=""/>
       <img class="heban_item" src="/src/assets/湖南.png" alt=""/>
       <img class="heban_item title" src="/src/assets/湖北社團總會.png" alt=""/>
-      <img class="heban_item" src="/src/assets/山東社團總會.jpg" alt=""/>
+      <img class="heban_item" src="/src/assets/山東社團總會.png" alt=""/>
       <img class="heban_item" src="/src/assets/江西logo.jpg" alt=""/>
       <img class="heban_item" src="/src/assets/cd.png" alt=""/>
       <img class="heban_item title" src="/src/assets/香港菁英會.png" alt=""/>
