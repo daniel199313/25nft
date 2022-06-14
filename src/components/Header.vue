@@ -56,7 +56,7 @@ let seconds = computed(()=>Math.floor(timecount.value % D % H % M))
 
 if (getStage()<2) {
   const timer = setInterval(()=> {
-    timecount.value -= 1
+    timecount.value = getNextStageSec()
   },1000)  
   onUnmounted(()=> clearInterval(timer))
 }
