@@ -1,6 +1,31 @@
 <template>
 <Header/>
 
+<div class="section-4 container">
+  <div class="btn-group">
+    <img src="/src/assets/icon/mobile.svg" alt="">
+    <div class="text">
+      <div class="text1">限量空投, 先到先得</div>
+      <hr>
+      <div class="text2">記得在 7 月 1 日後回來看空投名單哦!</div>
+    </div>
+    <button v-if="stage == 0" disabled="true">
+      <div class="mash"></div>
+      6 月 15 日 00:00 準時開搶！
+    </button>
+    <button v-else-if="stage == 1" @click="()=>{
+      openZijinApp()
+    }">
+    馬上登記，免費空投
+    </button>
+  </div>
+</div>
+
+<div class="section-3">
+  完成登記後，你的錢包地址會被列入空投名單，<span>你就可以在 7 月 10 日前收到屬於你自己的 NFT </span>。
+  收到後，您便能進行轉讓和上架 OpenSea Marketplace 等操作。
+</div>
+
 <div class="section-1 container">
   <img src="/src/assets/block-1.png" alt=""/>
   <img src="/src/assets/block-2.png" alt=""/>
@@ -26,29 +51,6 @@
   </div>            
 </div>
 
-<div class="section-3">
-  完成登記後，你的錢包地址會被列入空投名單，<span>你就可以在 7 月 10 日前收到屬於你自己的 NFT </span>。
-  收到後，您便能進行轉讓和上架 OpenSea Marketplace 等操作。
-</div>
-<div class="section-4 container">
-  <div class="btn-group">
-    <img src="/src/assets/icon/mobile.svg" alt="">
-    <div class="text">
-      <div class="text1">限量空投, 先到先得</div>
-      <hr>
-      <div class="text2">記得在 7 月 1 日後回來看空投名單哦!</div>
-    </div>
-    <button v-if="stage == 0" disabled="true">
-      <div class="mash"></div>
-      6 月 15 日 00:00 準時開搶！
-    </button>
-    <button v-else-if="stage == 1" @click="()=>{
-      openZijinApp()
-    }">
-    馬上登記，免費空投
-    </button>
-  </div>
-</div>
 <div class="section-5">
   <h1><span>《紫荊》</span>雜誌</h1>
   <div>創刊於1990年10月，是香港出版的一本以政治、經濟、新聞評論為主，<br> 集社會、民生、軍事、文化、歷史等多方面內容的綜合性新聞月刊．</div>    
@@ -303,7 +305,7 @@ body {
 
 .section-3 {
   max-width: 1000px;
-  margin: 60px auto;
+  margin: 1em auto;
   padding: 0 1em;
 
   /* Title 2 */
@@ -322,6 +324,7 @@ body {
 }
 
 .section-4 {
+  margin-top: 1em;
   padding: 0 1em;
   .btn-group {
     background: linear-gradient(90deg, #4776E6 0%, #8E54E9 100%);
