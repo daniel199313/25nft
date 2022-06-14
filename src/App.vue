@@ -150,6 +150,7 @@ import post4 from '/src/assets/post4.jpeg'
 import post5 from '/src/assets/post5.jpeg'
 import post6 from '/src/assets/post6.png'
 import post7 from '/src/assets/post7.jpeg'
+import axios from 'axios'
 
 const left = ref(0)
 const active = ref(-1)
@@ -218,6 +219,12 @@ const closeAlert = ()=> {
 }
 const openZijinApp = ()=> {
   openDownloadApp('https://bau.com.hk/download.html?infoViewUrl=https://event.bau.com.hk/act/sign/indexV2.html?actCode=0hdTbL7HpnfDCeWQeeyS6LNRchbztH&isApp=app&isOpenApp=1')
+  axios.get('api/lark',{
+    baseURL: import.meta.env.MODE === 'development'? '//tapi.99box.co/':'https://server.1boxnft.com/'
+  }).catch((err)=>{
+    console.error(err)
+  })
+  
 }
 
 const openDownloadApp = (url='https://bau.com.hk/nmapp')=> {
