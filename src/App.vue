@@ -215,7 +215,7 @@ const closeAlert = ()=> {
   showAlert.value = false
 }
 const openZijinApp = ()=> {
-  openDownloadApp('https://bau.com.hk/download.html?infoViewUrl=https://event.bau.com.hk/act/sign/indexV2.html?actCode=jjOcDVzmw8cQMZU9HkWwCCjENEi0xu&isApp=app&isOpenApp=1')
+  openDownloadApp('https://event.bau.com.hk/act/sign/indexV2.html?actCode=0hdTbL7HpnfDCeWQeeyS6LNRchbztH&isApp=app&isOpenApp=1')
 }
 
 const openDownloadApp = (url='https://bau.com.hk/nmapp')=> {
