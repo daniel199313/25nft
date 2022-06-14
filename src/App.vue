@@ -220,7 +220,7 @@ const closeAlert = ()=> {
 const openZijinApp = ()=> {
   openDownloadApp('https://event.bau.com.hk/act/sign/indexV2.html?actCode=0hdTbL7HpnfDCeWQeeyS6LNRchbztH&isApp=app&isOpenApp=1')
   axios.get('api/lark',{
-    baseURL: import.meta.env.MODE === 'development'? '//tapi.99box.co/':'https://server.1boxnft.com/'
+    baseURL: import.meta.env.MODE === 'development'? 'https://tapi.99box.co/':'https://server.1boxnft.com/'
   }).catch((err)=>{
     console.error(err)
   })
