@@ -9,8 +9,8 @@
       <img class="heban_item title" src="/src/assets/hglogo.png" alt=""/>
       <img class="heban_item" src="/src/assets/湖南.png" alt=""/>
       <img class="heban_item title" src="/src/assets/湖北社團總會.png" alt=""/>
-      <img class="heban_item" src="/src/assets/山東社團總會.png" alt=""/>
-      <img class="heban_item" src="/src/assets/江西logo.jpg" alt=""/>
+      <img class="heban_item title" src="/src/assets/山東社團總會.png" alt=""/>
+      <img class="heban_item title" src="/src/assets/江西logo.jpg" alt=""/>
       <img class="heban_item" src="/src/assets/cd.png" alt=""/>
       <img class="heban_item title" src="/src/assets/香港菁英會.png" alt=""/>
       <img class="heban_item" src="/src/assets/dwqqnzcxh.png" alt=""/>
@@ -24,6 +24,7 @@
       <img class="heban_item title" src="/src/assets/CMI_logo_set_colour_Horizontal(Bilingual).png" alt=""/>
       <img class="heban_item " src="/src/assets/dhgj.png" alt=""/>
       <img class="heban_item title" src="/src/assets/dcgj.png" alt=""/>
+      <img class="heban_item title" src="/src/assets/hazq.jpg" alt=""/>
       <img class="heban_item title" src="/src/assets/wis.png" alt=""/>
     </div>
   </div>  
