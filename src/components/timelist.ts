@@ -9,8 +9,8 @@ startTime.setMinutes(0)
 
 const endTime = new Date(Date.now())
 endTime.setMonth(5)
-endTime.setDate(30)
-endTime.setHours(0)
+endTime.setDate(15)
+endTime.setHours(2)
 endTime.setSeconds(0)
 endTime.setMinutes(0)
 

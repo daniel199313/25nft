@@ -3,7 +3,7 @@
   <img class="bg-pc" width="1440"  src="/src/assets/images/banner.jpg" alt="">
   <img class="bg-m" src="/src/assets/images/banner-m.jpg" alt="">
   <div class="box">
-    <div class="timer-plan">
+    <!-- <div class="timer-plan">
       <div class="title">Registration {{
         getStage() == 0 ? 'Opens': 'Close'
       }} in</div>
@@ -30,7 +30,7 @@
           Seconds
         </div>                        
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
 </template>

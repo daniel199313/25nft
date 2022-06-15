@@ -18,6 +18,10 @@
     }">
     馬上登記，免費空投
     </button>
+    <button v-if="stage == 2" disabled="true">
+      <div class="mash"></div>
+      已領完
+    </button>    
   </div>
 </div>
 
