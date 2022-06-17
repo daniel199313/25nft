@@ -14,6 +14,7 @@
       <img class="heban_item" src="/src/assets/cd.png" alt=""/>
       <img class="heban_item title" src="/src/assets/香港菁英會.png" alt=""/>
       <img class="heban_item" src="/src/assets/dwqqnzcxh.png" alt=""/>
+      <img class="heban_item title" src="/src/assets/xgzukjlh.jpg" alt=""/>  
       <img class="heban_item " src="/src/assets/WX20220614-160227@2x.png" alt=""/>
       <img class="heban_item title" src="/src/assets/大灣區金融科技促進總會logo-H.png" alt=""/>      
     </div>

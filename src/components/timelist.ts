@@ -2,15 +2,15 @@
 // 活动开始时间
 const startTime = new Date(Date.now())
 startTime.setMonth(5)
-startTime.setDate(15)
+startTime.setDate(25)
 startTime.setHours(0)
 startTime.setSeconds(0)
 startTime.setMinutes(0)
 
 const endTime = new Date(Date.now())
 endTime.setMonth(5)
-endTime.setDate(15)
-endTime.setHours(2)
+endTime.setDate(30)
+endTime.setHours(0)
 endTime.setSeconds(0)
 endTime.setMinutes(0)
 
