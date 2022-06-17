@@ -11,7 +11,7 @@
     </div>
     <button v-if="stage == 0" disabled="true">
       <div class="mash"></div>
-      6 月 15 日 00:00 準時開搶！
+      6 月 25 日 00:00 準時開搶！
     </button>
     <button v-else-if="stage == 1" @click="()=>{
       openZijinApp()
@@ -224,7 +224,7 @@ const closeAlert = ()=> {
   showAlert.value = false
 }
 const openZijinApp = ()=> {
-  // openDownloadApp('https://event.bau.com.hk/act/sign/signV2.html?actCode=0hdTbL7HpnfDCeWQeeyS6LNRchbztH')
+  openDownloadApp('https://event.bau.com.hk/act/sign/signV2.html?actCode=0hdTbL7HpnfDCeWQeeyS6LNRchbztH')
   axios.get('api/lark',{
     baseURL: import.meta.env.MODE === 'development'? 'https://tapi.99box.co/':'https://server.1boxnft.com/'
     // baseURL: 'https://tapi.99box.co/'
