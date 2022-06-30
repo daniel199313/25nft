@@ -20,7 +20,7 @@
     </button>
     <button v-if="stage == 2" disabled="true">
       <div class="mash"></div>
-      已領完
+      即将公布名单
     </button>    
   </div>
 </div>
