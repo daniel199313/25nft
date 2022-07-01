@@ -372,7 +372,7 @@ body {
       border-radius: 6px; 
       width: 281px;
       height: 50px;   
-      margin-right:50px ;        
+          
 
       /* 1Box_White */
 
