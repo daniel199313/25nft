@@ -9,7 +9,7 @@
       <hr>
       <div class="text2">記得在 7 月 1 日後回來看空投名單哦!</div>
     </div>
-    <button v-if="stage == 0" disabled="true">
+    <!-- <button v-if="stage == 0" disabled="true">
       <div class="mash"></div>
       6 月 25 日 00:00 準時開搶！
     </button>
@@ -21,7 +21,10 @@
     <button v-if="stage == 2" disabled="true">
       <div class="mash"></div>
       即將公布名單
-    </button>    
+    </button>  -->
+    <a href="https://docs.google.com/spreadsheets/d/1NjMD4_GVRQeL2A5ZD6jGdrHXoGHlhoULYuJMKGbFhyk/edit?usp=sharing
+" target="_blank"><div>查看空投名單</div>
+</a>  
   </div>
 </div>
 
@@ -352,7 +355,11 @@ body {
         text-align: right;
       }
     }
-    button {
+    button,a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
       border: none;
       outline: none;
       font-family: 'Inter';
