@@ -24,7 +24,7 @@
     </button>  -->
     <div>
       <a class="btn" href="https://opensea.io/collection/the-forever-blooming-bauhinia" target="_blank"><div>进入Opensea查看</div></a>
-      <a href="https://etherscan.io/address/0xfb0a4a2bec6288fd57bbfcbb7d66103ee5234155" target="_blank">合約地址 </a>      
+          
     </div>
   </div>
 </div>
@@ -32,6 +32,7 @@
 <div class="section-3">
   完成登記後，你的錢包地址會被列入空投名單，<span>你就可以在 7 月 10 日前收到屬於你自己的 NFT </span>。
   收到後，您便能進行轉讓和上架 OpenSea Marketplace 等操作。
+  <a href="https://etherscan.io/address/0xfb0a4a2bec6288fd57bbfcbb7d66103ee5234155" target="_blank">合約地址 </a>  
 </div>
 
 <div class="section-1 container">
@@ -326,7 +327,7 @@ body {
 
   /* 1Box Dark Grey */
   color: #979797;
-  span {
+  span,a {
     color:#4776E6;
   }
 }
