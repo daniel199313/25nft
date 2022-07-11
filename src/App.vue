@@ -22,9 +22,10 @@
       <div class="mash"></div>
       即將公布名單
     </button>  -->
-    <a href="https://docs.google.com/spreadsheets/d/1NjMD4_GVRQeL2A5ZD6jGdrHXoGHlhoULYuJMKGbFhyk/edit?usp=sharing
-" target="_blank"><div>查看空投名單</div>
-</a>  
+    <div>
+      <a class="btn" href="https://opensea.io/collection/the-forever-blooming-bauhinia" target="_blank"><div>进入Opensea查看</div></a>
+      <a href="https://etherscan.io/address/0xfb0a4a2bec6288fd57bbfcbb7d66103ee5234155" target="_blank">合約地址 </a>      
+    </div>
   </div>
 </div>
 
@@ -355,7 +356,10 @@ body {
         text-align: right;
       }
     }
-    button,a {
+    a {
+      color: #fff;
+    }
+    button,a.btn {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -371,7 +375,8 @@ body {
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       border-radius: 6px; 
       width: 281px;
-      height: 50px;   
+      height: 50px;
+      margin: 10px auto;   
           
 
       /* 1Box_White */
